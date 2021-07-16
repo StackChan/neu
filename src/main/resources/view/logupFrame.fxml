@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" prefHeight="213.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NursingManageSystem.controller.LogUpFrameController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="371.0" prefWidth="327.0" spacing="20.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                        <Label fx:id="idLable" contentDisplay="CENTER" styleClass="class_label" text="昵称：" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" />
+                        <TextField fx:id="idTextField" prefHeight="43.0" prefWidth="202.0" promptText="输入昵称(超管请输入&quot;超管)：" styleClass="class_textField" />
+               </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="161.0" prefWidth="327.0" spacing="15.0">
+               <children>
+                        <Label fx:id="passwordLabel" contentDisplay="CENTER" styleClass="class_label" text="密码：" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" />
+                        <PasswordField fx:id="passwordTextField" promptText="请填入您的密码：" styleClass="class_textField" />
+               </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="0.0" prefWidth="327.0" spacing="15.0" />
+                <HBox alignment="CENTER" prefHeight="64.0" prefWidth="327.0" spacing="25.0">
+                    <children>
+                        <Button fx:id="logupButton" mnemonicParsing="false" onAction="#logUpButtonEvent" prefHeight="73.0" prefWidth="93.0" styleClass="class_button" text="注册" />
+                    </children>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+
+
+
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </VBox>
+    </children>
+</HBox>

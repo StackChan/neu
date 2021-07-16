@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<SplitPane dividerPositions="0.13316582914572864" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="436.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NursingManageSystem.controller.MainFrameController1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="38.0" prefWidth="598.0">
+         <children>
+            <SplitPane dividerPositions="0.9797979797979798" prefHeight="160.0" prefWidth="200.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="1.0" prefHeight="47.0" prefWidth="147.0" text="医院管理系统">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+              </items>
+            </SplitPane>
+            <TextField fx:id="idTextField" layoutX="780.0" layoutY="12.0" prefHeight="30.0" prefWidth="66.0" text="管理员" />
+            <Button fx:id="exitButton" layoutX="855.0" layoutY="12.0" mnemonicParsing="false" onAction="#exitButtonEvent" text="注销" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="349.0" prefWidth="598.0">
+         <children>
+            <SplitPane dividerPositions="0.18394648829431437" prefHeight="341.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="208.0">
+                     <children>
+                        <TreeView fx:id="treeView" layoutX="-17.0" prefHeight="370.0" prefWidth="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Accordion layoutX="84.0" layoutY="55.0" />
+                        <SplitPane dividerPositions="0.6765578635014837" layoutX="61.0" layoutY="36.0" orientation="VERTICAL" prefHeight="339.0" prefWidth="482.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="750.0">
+                                 <children>
+                                    <ToolBar prefHeight="44.0" prefWidth="750.0">
+                                      <items>
+                                          <HBox prefHeight="30.0" prefWidth="284.0">
+                                             <children>
+                                                <Button fx:id="addButton" mnemonicParsing="false" onAction="#do_addButton_event" prefHeight="30.0" prefWidth="100.0" text="➕新增" />
+                                                <Button fx:id="fixButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" text="♗修改" />
+                                                <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" text="✘删除" />
+                                             </children>
+                                          </HBox>
+                                          <Label text="                                                 " />
+                                          <TextField fx:id="searchTextField" promptText="搜索登录名" />
+                                      </items>
+                                    </ToolBar>
+                                    <TableView fx:id="tableView" layoutX="-3.0" layoutY="44.0" prefHeight="200.0" prefWidth="752.0">
+                                      <columns>
+                                        <TableColumn fx:id="checkTableColumn" prefWidth="64.0">
+                                             <graphic>
+                                                <CheckBox mnemonicParsing="false" />
+                                             </graphic></TableColumn>
+                                        <TableColumn fx:id="idTableColumn" prefWidth="77.0" text="登录名" />
+                                          <TableColumn fx:id="nameTableColumn" prefWidth="89.0" text="姓名" />
+                                          <TableColumn fx:id="birthdayTableColumn" prefWidth="100.0" text="出生日期" />
+                                          <TableColumn fx:id="titleTableColumn" minWidth="6.0" prefWidth="101.0" text="职称" />
+                                          <TableColumn fx:id="majorTableColumn" prefWidth="95.0" text="专长" />
+                                          <TableColumn fx:id="identityCardTableColumn" prefWidth="112.0" text="身份证" />
+                                          <TableColumn fx:id="phoneTableColumn" prefWidth="113.0" text="电话" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label layoutX="65.0" layoutY="16.0" text="姓名" />
+                                    <Label layoutX="65.0" layoutY="48.0" text="职称" />
+                                    <Label layoutX="65.0" layoutY="81.0" text="出生日期" />
+                                    <Label layoutX="375.0" layoutY="16.0" text="专长" />
+                                    <Label layoutX="375.0" layoutY="48.0" text="联系方式" />
+                                    <Label layoutX="375.0" layoutY="81.0" text="身份证" />
+                                    <TextField fx:id="nameTextField" layoutX="131.0" layoutY="11.0" />
+                                    <TextField fx:id="birthdayTextField" layoutX="131.0" layoutY="76.0" />
+                                    <TextField fx:id="identityCardTextField" layoutX="457.0" layoutY="76.0" />
+                                    <TextField fx:id="phoneTextField" layoutX="457.0" layoutY="43.0" />
+                                    <TextField fx:id="majorTextField" layoutX="457.0" layoutY="11.0" />
+                                    <ComboBox fx:id="titleComboBox" layoutX="131.0" layoutY="43.0" prefHeight="30.0" prefWidth="202.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
